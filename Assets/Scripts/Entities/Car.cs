@@ -1,13 +1,11 @@
 using UnityEngine;
 using System.Collections;
-using Unity.AI.Navigation;
 
-public class Car : MonoBehaviour
+public class Car : Entity
 {
     [SerializeField] private float _duration;
     [SerializeField] private Transform _firstPoint;
     [SerializeField] private Transform _secondPoint;
-    [SerializeField] private NavMeshSurface _navMeshSurface;
 
     private void Start()
     {
@@ -36,6 +34,5 @@ public class Car : MonoBehaviour
         }
 
         transform.position = target;
-        _navMeshSurface.BuildNavMesh();
     }
 }
