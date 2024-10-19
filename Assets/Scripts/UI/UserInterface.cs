@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UserInterface : MonoBehaviour
 {
+    [SerializeField] private Button _exitButton;
     [SerializeField] private TextMeshProUGUI _newsText;
     [SerializeField] private TextMeshProUGUI _npcInteractText;
     [SerializeField] private float _timeToDisappear;
@@ -21,8 +22,10 @@ public class UserInterface : MonoBehaviour
 
         _joystickMovement.gameObject.SetActive(Application.isMobilePlatform);
         _joystickRotation.gameObject.SetActive(Application.isMobilePlatform);
+        _interactButton.gameObject.SetActive(Application.isMobilePlatform);
 
         _interactButton.onClick.AddListener(OnInteractButtonHandler);
+        _exitButton.onClick.AddListener(OnExitButtonHandler);
 
         Broadcast.Subscribe<NPCDestoroyedMessage>(OnNPCDestoroyedHandler);
         Broadcast.Subscribe<NPCInteractedMessage>(OnNPCInteractedHandler);
@@ -32,6 +35,11 @@ public class UserInterface : MonoBehaviour
     {
         Broadcast.Unsubscribe<NPCDestoroyedMessage>(OnNPCDestoroyedHandler);
         Broadcast.Unsubscribe<NPCInteractedMessage>(OnNPCInteractedHandler);
+    }
+
+    private void OnExitButtonHandler()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void OnInteractButtonHandler()
@@ -54,7 +62,7 @@ public class UserInterface : MonoBehaviour
     private IEnumerator ActivateText(TextMeshProUGUI text)
     {
         text.gameObject.SetActive(true);
-        
+
         yield return new WaitForSeconds(_timeToDisappear);
 
         text.gameObject.SetActive(false);

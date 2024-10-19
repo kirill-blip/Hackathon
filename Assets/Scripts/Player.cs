@@ -29,9 +29,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            Cursor.lockState = Cursor.lockState == CursorLockMode.None ? CursorLockMode.Locked : CursorLockMode.None;
+            Cursor.visible = !Cursor.visible;
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -54,10 +55,10 @@ public class Player : MonoBehaviour
             _horizontalInput = Input.GetAxis("Horizontal");
             _verticalInput = Input.GetAxis("Vertical");
         }
-        
+
         Vector3 direction = transform.TransformDirection(_horizontalInput, 0, _verticalInput);
         Vector3 velocity = direction * _speed;
-        
+
         _rigidbody.velocity = new Vector3(velocity.x, _rigidbody.velocity.y, velocity.z);
     }
 
