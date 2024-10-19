@@ -1,14 +1,11 @@
 using System;
-
 using UnityEngine;
 using UnityEngine.AI;
-
 using Random = UnityEngine.Random;
 
 public class NonPlayerCharacter : MonoBehaviour, IInteractable
 {
     [SerializeField] private float _velocity = 5;
-    [SerializeField] private float _multiplier = 1.5f;
 
     [Space(5f)]
     [SerializeField] private float _range = 25;
@@ -95,7 +92,6 @@ public class NonPlayerCharacter : MonoBehaviour, IInteractable
         {
             if (Vector3.Distance(transform.position, _lastPosition) < 0.1f)
             {
-                Debug.Log("NPC is stuck, finding new position");
                 MoveWithRandomPosition();
             }
 
@@ -106,6 +102,6 @@ public class NonPlayerCharacter : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.LogError("Method doesn't implemented");
+        Broadcast.Send(new NPCInteractedMessage());
     }
 }

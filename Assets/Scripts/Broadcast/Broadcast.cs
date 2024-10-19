@@ -39,4 +39,9 @@ public static class Broadcast
             }
         }
     }
+
+    internal static void Unubscribe<T>(object onNPCInteractedHandler)
+    {
+        throw new NotImplementedException();
+    }
 }
