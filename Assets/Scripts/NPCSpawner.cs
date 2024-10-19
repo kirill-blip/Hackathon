@@ -31,6 +31,8 @@ public class NPCSpawner : MonoBehaviour
     private void OnCollidedWithCarHandler(object sender, NonPlayerCharacter npc)
     {
         SpawnNPC();
+
+        Broadcast.Send(new NPCDestoroyed(npc.name));
         npc.CollidedWithCar -= OnCollidedWithCarHandler;
         Destroy(npc.gameObject);
     }

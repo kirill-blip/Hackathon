@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: -1090571370066636698}
   - component: {fileID: 4025972886134583805}
   m_Layer: 3
-  m_Name: Vehicle 1
+  m_Name: The Junker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
