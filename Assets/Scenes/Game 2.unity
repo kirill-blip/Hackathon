@@ -5101,7 +5101,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 75}
   m_SizeDelta: {x: 600, y: 75}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &323389612
@@ -17270,7 +17270,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1200867215}
-  - component: {fileID: 1200867216}
   m_Layer: 0
   m_Name: NPCPosition (2)
   m_TagString: Untagged
@@ -17287,27 +17286,12 @@ Transform:
   m_GameObject: {fileID: 1200867214}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 200.5, y: 2.5, z: 104.75}
+  m_LocalPosition: {x: 101.5, y: 2.5, z: 51.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 450100659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1200867216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200867214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65268c748da6a44ab5a6476571564b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prefabs: []
-  _count: 5
-  _spawnPositionsParent: {fileID: 0}
 --- !u!1001 &1204215372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24887,7 +24871,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634888053}
-  - component: {fileID: 1634888054}
   m_Layer: 0
   m_Name: NPCPosition
   m_TagString: Untagged
@@ -24910,21 +24893,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 450100659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1634888054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634888052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65268c748da6a44ab5a6476571564b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prefabs: []
-  _count: 5
-  _spawnPositionsParent: {fileID: 0}
 --- !u!1001 &1642565113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24988,7 +24956,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1643883961}
-  - component: {fileID: 1643883962}
   m_Layer: 0
   m_Name: NPCPosition (1)
   m_TagString: Untagged
@@ -25011,21 +24978,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 450100659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1643883962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643883960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65268c748da6a44ab5a6476571564b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prefabs: []
-  _count: 5
-  _spawnPositionsParent: {fileID: 0}
 --- !u!1001 &1647006659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28484,7 +28436,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1890962015}
-  - component: {fileID: 1890962016}
   m_Layer: 0
   m_Name: NPCPosition (3)
   m_TagString: Untagged
@@ -28507,21 +28458,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 450100659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1890962016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890962014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65268c748da6a44ab5a6476571564b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prefabs: []
-  _count: 5
-  _spawnPositionsParent: {fileID: 0}
 --- !u!1001 &1895833218
 PrefabInstance:
   m_ObjectHideFlags: 0

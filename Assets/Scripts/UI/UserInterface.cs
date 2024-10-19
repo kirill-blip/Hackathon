@@ -55,7 +55,7 @@ public class UserInterface : MonoBehaviour
     private void OnNPCDestoroyedHandler(NPCDestoroyedMessage destoroyed)
     {
         string message = destoroyed.Message.Replace("(Clone)", "");
-        _newsText.text = $"Упс. {message} сбили";
+        _newsText.text = $"Упс. {message} сбит";
         StartCoroutine(ActivateText(_newsText));
     }
 
