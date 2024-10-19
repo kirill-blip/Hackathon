@@ -10,11 +10,14 @@ public class Player : MonoBehaviour
 
     private float _horizontalInput = 0;
     private float _verticalInput = 0;
+    private Rigidbody _rigidbody;
 
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        _rigidbody = GetComponent<Rigidbody>();
 
         Broadcast.Subscribe<InteractMessage>(OnInteractHandler);
     }
@@ -51,9 +54,11 @@ public class Player : MonoBehaviour
             _horizontalInput = Input.GetAxis("Horizontal");
             _verticalInput = Input.GetAxis("Vertical");
         }
-
-        Vector3 direction = new Vector3(_horizontalInput, 0, _verticalInput);
-        transform.Translate(direction * _speed * Time.deltaTime);
+        
+        Vector3 direction = transform.TransformDirection(_horizontalInput, 0, _verticalInput);
+        Vector3 velocity = direction * _speed;
+        
+        _rigidbody.velocity = new Vector3(velocity.x, _rigidbody.velocity.y, velocity.z);
     }
 
     public void Interact()
